@@ -1,0 +1,36 @@
+<view class="ydcs">
+    <!--顶部轮播图-->
+    <swiper circular="{{circular}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+                <image mdoe="aspectFill" src="{{item}}" class="slide-image" width="355" height="150"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!--消息滚动显示-->
+    <view class="info iconfont icon-weibiaoti1">
+        <swiper vertical="true" circular="{{circular}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay2}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image mdoe="aspectFill" src="{{item}}" class="slide-image" width="355" height="150"/>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!--导航-->
+    <view class="nav">
+        <block wx:for="{{ navList }}" wx:key="*this">
+            <navigator url="{{ item.url }}" class="nav-item">
+                <image src="{{ item.img }}"></image>
+                <text>{{ item.desc }}</text>
+            </navigator>
+        </block>
+    </view>
+    <!--热门推荐-->
+    <view class="hot">
+        <view class="hot-title">热门推荐</view>
+        <view class="hot-article">
+
+        </view>
+    </view>
+</view>

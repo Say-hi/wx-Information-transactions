@@ -1,0 +1,70 @@
+image {
+  width: 100%;
+}
+//滚动信息
+.info {
+  padding-left: 50rpx;
+  overflow: hidden;
+  swiper {
+    height: 50rpx;
+  }
+}
+.icon-weibiaoti1 {
+  position: relative;
+}
+.icon-weibiaoti1::before {
+  position: absolute;
+  top: 50%;
+  left: 5rpx;
+  transform: translate(0, -50%);
+  font-size: 40rpx;
+  color: #0094ff;
+}
+//导航
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+  .nav-item {
+    width: 33.33%;
+    height: 200rpx;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    image {
+      width: 100%;
+      height: 100%;
+    }
+    text {
+      text-align: center;
+      font-size: 24rpx;
+      line-height: 60rpx;
+    }
+  }
+}
+//热门推荐
+.hot {
+  .hot-title {
+    text-align: center;
+    font-size: 26rpx;
+    font-weight: 700;
+    position: relative;
+  }
+  .hot-title::after ,.hot-title::before {
+    content: '';
+    position: absolute;
+    width: 250rpx;
+    height: 2rpx;
+    top: 15rpx;
+    background-color: #000;
+  }
+  .hot-title::before {
+    left: 40rpx;
+  }
+  .hot-title::after {
+    right: 40rpx;
+  }
+}
